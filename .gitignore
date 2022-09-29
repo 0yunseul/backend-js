@@ -1,0 +1,8 @@
+#node_modules 폴더 제외하고 깃헙에 전송!
+
+/node_modules
+
+#.txt, .sql
+*.sql
+*.txt
+
