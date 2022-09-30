@@ -1,0 +1,34 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title=title 
+        link(rel="stylesheet", href="css/style.css")
+        script(src="script/jquery-3.6.1.js")   
+        link(rel="shortcut icon", href="images/favicon.png", type="image/x-icon")
+    body 
+        header
+            h1 모두의 투어, HANUL TOUR! 
+            p=message
+        nav 
+            ul(id="gnb")
+                li 
+                    a(href="/") 처음으로
+                li 
+                    a(href="/tour") 한울투어
+                li 
+                    a(href="/reserve") 예약확인/수정
+                li 
+                    a(href="/customer") 고객센터
+        div(class="container")
+            button(type="button", id="reserve")  예약확인/수정   
+        div(class="views")
+            img(src="images/welcome.jpg", alt="landscape") 
+        hr
+        footer
+            div(class="container")
+               p &copy; hanul. 2022. all rights reserved.
+        script(src="script/main.js")       
+
