@@ -34,7 +34,13 @@ app.get('/reserve', function (req, res) {
     res.render('cs');   
  });
 app.post('/send_reserve', function (req, res) { 
-    res.send(req.body.guest_name+"님, 환영합니다."); //bodyParser가 이해하고 출력
+   // res.send(req.body.guest_name+"님, 환영합니다."); //bodyParser가 이해하고 출력
+   if(req.body.guest_name==="홍길동"){
+    res.send(req.body.guest_name+"님, 환영합니다.");
+   }else{
+    res.send("회원가입페이지로 이동합니다")
+   }
+    console.log(req.body);
 });
 
 const CURRENT_PORT = app.get('port'); //app.set() 으로 지정한 포트번호 
