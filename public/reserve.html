@@ -7,24 +7,27 @@
     <title>hanul tour!</title>
     <link href="css/style.css" rel="stylesheet">
     <script src="script/jquery-3.6.1.js"></script>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 </head>
 <body>
-    <h1>모두의 투어, HANUL TOUR!</h1>
-    <h2>예약 확인</h2>
+    <header>
+        <h1>모두의 투어, HANUL TOUR!</h1>
+        <h2>예약 확인</h2>
+    </header>
     <nav>
         <ul id="gnb">
             <li><a href="/">처음으로</a></li>
             <li><a href="#">한울투어</a></li>
-            <li><a href="#">예약확인/수정</a></li>
+            <li><a href="/reserve">예약확인/수정</a></li>
             <li><a href="#">고객센터</a></li>
         </ul>
     </nav>
     <div class="container">
-        <form id="checkForm" name="checkForm" autocomplete="off" method="post">
+        <form action="/send_reserve" id="checkForm" name="checkForm" autocomplete="off" method="post">
             <label for="guest_name">예약자명</label>
-            <input type="text" id="guest_name" name="guest_name">
+            <input type="text" id="guest_name" name="guest_name" placeholder="12자 이내">
             <label for="guest_phone">예약자 전화번호</label>
-            <input type="text" id="guest_phone" name="guest_phone">
+            <input type="tel" id="guest_phone" name="guest_phone" placeholder="- 빼고 입력하세요">
             <input type="submit" value="확인">
         </form>
     </div>
